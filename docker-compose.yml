@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  spweb:
+    image: zy151111/bsc-sp-swap-web:latest
+    container_name: spweb
+    restart: always
+    ports:
+      - "8080:80"
+    privileged: true
+networks:
+  sp_default:
+    driver: bridge
