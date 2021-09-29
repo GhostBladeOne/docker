@@ -16,4 +16,4 @@ jobs:
           echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
           scp sh/restart.sh ${{secrets.HOST_NAME}}@${{secrets.BSC_PRO_HOST}}:~/sh/
           scp docker-compose.yml ${{secrets.HOST_NAME}}@${{secrets.BSC_PRO_HOST}}:~/sh/
-          ssh ${{secrets.HOST_NAME}}@${{secrets.BSC_PRO_HOST}} "cd bsc_sh && sh restart.sh"
+          ssh ${{secrets.HOST_NAME}}@${{secrets.BSC_PRO_HOST}} "cd sh && sh restart.sh"
